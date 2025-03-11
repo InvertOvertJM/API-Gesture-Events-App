@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+#gestureBox {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    border: 8px dotted black;;
+    border-radius: 3px;;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    font-weight: bold;
+    color:yellow;
+    user-select: none;
+}
+
