@@ -2,6 +2,7 @@ const gestureBox = document.getElementById("gestureBox");
 const output = document.getElementById("output");
 
 let foodList = [];
+let index = -1;
 let startX, startY, endX, endY;
 
 function getFood(){
@@ -9,6 +10,8 @@ function getFood(){
     .then(response => response.json()) 
     .then(data => {
        console.log(data.image);
+       foodList.push(data.image);
+       index = foodList.length -1;
        gestureBox.src = data.image;
     })
     .catch(error => console.error('Error:', error));
@@ -44,8 +47,13 @@ gestureBox.addEventListener("touchend", function(event) {
         if (diffX > 0) {
             getFood()
             output.textContent = "You swiped right!";
-        } 
+        } else {
+            index--;
+            gestureBox.src = foodList[index]
+            output.textContent = "You to the previous image,";
+        }
     }
 });
+
 
 
