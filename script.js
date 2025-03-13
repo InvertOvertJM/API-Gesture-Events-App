@@ -48,11 +48,13 @@ gestureBox.addEventListener("touchend", function(event) {
             getFood()
             console.log(index);
             output.textContent = "You swiped right!";
-        } else {
+        } else if(index > 0) {
             index--;
             console.log(index);
             gestureBox.src = foodList[index]
             output.textContent = "You to the previous image,";
+        } else{
+            output.textContent = "This is the last image";
         }
     }
 });
