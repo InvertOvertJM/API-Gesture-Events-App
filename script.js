@@ -25,18 +25,18 @@ function updateCounter() {
 }
 
 gestureBox.addEventListener("touchstart", function(event) {
-    gestureBox.style.backgroundColor = "red";
-    output.textContent = "Touch started";
+    gestureBox.style.borderColor = "#FF7D00";
+    output.textContent = "Touch started...";
     startX = event.touches[0].clientX;
     startY = event.touches[0].clientY;
 });
 
 gestureBox.addEventListener("touchmove", function(event) {
-    output.textContent = "MOVING AGAUGHAEUHGA";
+    output.textContent = "Moving...";
 });
 
 gestureBox.addEventListener("touchend", function(event) {
-    gestureBox.style.backgroundColor = "yellow";
+    gestureBox.style.borderColor = "#15616D";
     output.textContent = "Touch ended";
 
     endX = event.changedTouches[0].clientX;

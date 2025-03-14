@@ -40,7 +40,3 @@ p {
     color: #FFECD1;
     margin-top: 10px;
 }
-
-#gestureBox:active {
-    border-color: #FF7D00;
-}
