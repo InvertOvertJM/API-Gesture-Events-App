@@ -1,4 +1,6 @@
 body {
+    background-color: #001524;
+    color: #FFECD1;
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
@@ -6,20 +8,39 @@ body {
 }
 
 h1 {
+    color: #FF7D00;
+    font-size: 40px;
     margin-top: 20px;
 }
 
-#gestureBox {
-    width: 200px;
-    height: 200px;
-    display: flex;
-    border: 8px dotted black;;
-    border-radius: 3px;;
-    align-items: center;
-    justify-content: center;
-    margin: 20px auto;
-    font-weight: bold;
-    color:yellow;
-    user-select: none;
+p {
+    font-size: 25px;
+    margin: 10px;
 }
 
+#gestureBox {
+    width: 250px;
+    height: 250px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    border: 5px solid #15616D;
+    background-color: #FFECD1;
+    object-fit: cover;
+}
+
+#output {
+    font-size: 1.2em;
+    color: #FF7D00;
+    font-weight: bold;
+}
+
+#counter {
+    font-size: 1em;
+    color: #FFECD1;
+    margin-top: 10px;
+}
+
+#gestureBox:active {
+    border-color: #FF7D00;
+}
