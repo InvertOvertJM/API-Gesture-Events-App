@@ -1,6 +1,6 @@
 const gestureBox = document.getElementById("gestureBox");
 const output = document.getElementById("output");
-const counter = document.getElementById("counter"); // Get counter from HTML
+const counter = document.getElementById("counter");
 
 let foodList = [];
 let index = -1; // Start at -1 so the first fetch becomes index 0
@@ -19,7 +19,7 @@ function getFood() {
     });
 }
 
-// Updates counter display
+//counter display
 function updateCounter() {
     counter.textContent = `Image ${index + 1} of ${foodList.length}`;
 }
@@ -46,7 +46,7 @@ gestureBox.addEventListener("touchend", function(event) {
     let diffY = endY - startY;
 
     if (Math.abs(diffX) > Math.abs(diffY)) {
-        if (diffX > 0) { // Swipe right: Next image or fetch new one
+        if (diffX > 0) { // Swipe right
             index++;
             if (index >= foodList.length) {
                 getFood().then((image) => {
@@ -59,7 +59,7 @@ gestureBox.addEventListener("touchend", function(event) {
             }
             console.log(index);
             output.textContent = "You swiped right!";
-        } else if (index > 0) { // Swipe left: Go back
+        } else if (index > 0) { // Swipe left
             index--;
             gestureBox.src = foodList[index];
             updateCounter();
