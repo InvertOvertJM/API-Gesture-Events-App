@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+
 body {
     background-color: #001524;
     color: #FFECD1;
@@ -10,6 +13,7 @@ body {
 h1 {
     color: #FF7D00;
     font-size: 40px;
+    font-family:'Nabla Regular';
     margin-top: 20px;
 }
 
@@ -39,4 +43,21 @@ p {
     font-size: 30px;
     color: #FFECD1;
     margin-top: 10px;
+}
+
+
+.nabla-font {
+    font-family: "Nabla", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "EDPT" 100,
+        "EHLT" 12;
+}
+
+.oxygen-regular {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
