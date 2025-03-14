@@ -30,13 +30,13 @@ p {
 }
 
 #output {
-    font-size: 1.2em;
+    font-size: 30px;
     color: #FF7D00;
     font-weight: bold;
 }
 
 #counter {
-    font-size: 1em;
+    font-size: 30px;
     color: #FFECD1;
     margin-top: 10px;
 }

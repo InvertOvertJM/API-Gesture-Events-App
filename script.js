@@ -3,7 +3,7 @@ const output = document.getElementById("output");
 const counter = document.getElementById("counter");
 
 let foodList = [];
-let index = -1; // Start at -1 so the first fetch becomes index 0
+let index = -1; //start at -1 so the first fetch becomes index 0
 let startX, startY, endX, endY;
 
 function getFood() {
@@ -14,6 +14,7 @@ function getFood() {
                 console.log(data.image);
                 foodList.push(data.image);
                 resolve(data.image);
+                gestureBox.src = foodList[index];
             })
             .catch(error => console.error('Error:', error));
     });
@@ -46,10 +47,11 @@ gestureBox.addEventListener("touchend", function(event) {
     let diffY = endY - startY;
 
     if (Math.abs(diffX) > Math.abs(diffY)) {
-        if (diffX > 0) { // Swipe right
+        //swipe right
+        if (diffX > 0) { 
             index++;
             if (index >= foodList.length) {
-                getFood().then((image) => {
+                getFood().then((image) => { //gets image from fetch, sets src to image
                     gestureBox.src = image;
                     updateCounter();
                 });
@@ -59,7 +61,8 @@ gestureBox.addEventListener("touchend", function(event) {
             }
             console.log(index);
             output.textContent = "You swiped right!";
-        } else if (index > 0) { // Swipe left
+            //swipe left
+        } else if (index > 0) { 
             index--;
             gestureBox.src = foodList[index];
             updateCounter();
